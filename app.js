@@ -18,7 +18,7 @@ function mostrarResultado () {
         }
         else if (valorIMC < 25)
         {
-            classificacao = `com peso ideal. Parebéns.`
+            classificacao = `com peso ideal. <span class="verde">Parebéns.</span>`
         }
         else if (valorIMC < 30)
         {
@@ -34,10 +34,10 @@ function mostrarResultado () {
         }
         else
         {
-            classificacao = `com obesidade grau III. Cuidado.`
+            classificacao = `com obesidade grau III. <span class="vermelho">Cuidado.</span>`
         }
 
-        resultado.textContent = `${nome} seu IMC é ${valorIMC}. e você está ${classificacao}`
+        resultado.innerHTML = `${nome} seu IMC é ${valorIMC}. e você está ${classificacao}`
     }
 }
 
